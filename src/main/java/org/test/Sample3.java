@@ -22,9 +22,12 @@ public class Sample3 {
 
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
+		
+		
 
 		driver.get("https://chercher.tech/practice/practice-dropdowns-selenium-webdriver");
 
+		driver.manage().windows().maximize();
 		WebElement dropDown = driver.findElement(By.xpath("//select[@id='first']"));
 		Select s = new Select(dropDown);
 		s.selectByIndex(1);
@@ -45,8 +48,6 @@ public class Sample3 {
 		s1.selectByVisibleText("Avatar");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		js.executeScript("arguments[0].setAttribute('style','background:yellow')", s1);
-		js.executeScript("arguments[0].setAttribute('style','border:2px solid yellow')", s);
 
 		WebElement multi = driver.findElement(By.xpath("//select[@id='second']"));
 		Select se = new Select(multi);
