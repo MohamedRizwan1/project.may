@@ -28,6 +28,8 @@ public class Sample3 {
 		driver.get("https://chercher.tech/practice/practice-dropdowns-selenium-webdriver");
 
 		driver.manage().windows().maximize();
+	
+	
 		WebElement dropDown = driver.findElement(By.xpath("//select[@id='first']"));
 		Select s = new Select(dropDown);
 		s.selectByIndex(1);
