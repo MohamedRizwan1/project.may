@@ -45,42 +45,8 @@ public class SampleClass {
 
 		int row = driver.findElements(By.xpath("//table[@class='dataTable']//tbody//tr")).size();
 		System.out.println(row);
-//
-		int coloum = driver.findElements(By.xpath("//table[@class='dataTable']//tbody//tr[1]//td")).size();
-		System.out.println(coloum);
-//
-//		for (int i = 1; i <= row; i++) {
-//			for (int j = 1; j <= coloum; j++) {
-//				WebElement coloumList = driver.findElement(By.xpath("//table[@class='dataTable']//tbody//tr[" + i + "]//td[" + j + "]"));
-//				String coloumListName = coloumList.getText();
-//
-//				if (coloumListName.contains("Central")) {
-//					System.out.println(i);
-//					 coloumValue=j;
-//					 rowValue=i;
-//				}
-//				
-//
-//			}
-//
-//		}
-//		for (int k = 1; k <=coloum; k++) {
-//			WebElement particular=driver.findElement(By.xpath("//table[@class='dataTable']//tbody//tr[" + rowValue + "]//td["+k+"]"));
-//			String pr = particular.getText();
-//			System.out.println(pr);
-//		}
 
-		
-		List<WebElement> head = driver.findElements(By.xpath("//table[@class='dataTable']//thead//tr//th"));
-		WebElement comp=driver.findElement(By.xpath("//table[@class='dataTable']//thead//tr//th[1]"));
-		int numb = head.indexOf(comp)+1;
-		
-		for (int i = 1; i <=row; i++) {
-			WebElement company=driver.findElement(By.xpath("//table[@class='dataTable']//tbody//tr["+i+"]//td["+numb+"]"));
-			String allNames=company.getText();
-			System.out.println(allNames);
 		}
 	}
 	
 	
-}
